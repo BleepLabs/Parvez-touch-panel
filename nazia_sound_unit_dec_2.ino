@@ -5,6 +5,7 @@
 #include <SerialFlash.h>
 
 byte cc_num = 30;
+byte note_num = 30;
 
 
 // GUItool: begin automatically generated code
@@ -253,10 +254,10 @@ void loop() {
 
 
       if (prev_cc_out < 1 && cc_out >= 1) {
-        usbMIDI.sendNoteOn(10, 100, 1);
+        usbMIDI.sendNoteOn(note_num, 100, 1);
       }
       if (prev_cc_out > 1 && cc_out <= 1) {
-        usbMIDI.sendNoteOff(10, 100, 1);
+        usbMIDI.sendNoteOff(note_num, 100, 1);
       }
     }
   }
